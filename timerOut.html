@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Mijn Animatie Effect</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(https://img0.etsystatic.com/000/0/5434618/il_fullxfull.177222492.jpg);
+            background-size: 2rem;
+        }
+
+        html, body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            border: 0.25rem solid black;
+            width: 20rem;
+            height: 20rem;
+            justify-content: center;
+            margin: auto;
+            font-family: "Indie Flower";
+            font-size: 3rem;
+            border-radius: 50%;
+            background: radial-gradient(circle, red, green, blue);
+            color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+<main id="denbol">
+    <div id="subject">Den bol</div>
+</main>
+<script>
+    var s = document.getElementById("denbol");
+    s.style.color = "white";
+    s.style.background = " ";
+    s.style.background = "turquoise";
+
+    s.style.borderColor = "red";
+
+    var tsize = 0;
+    function tekstgrootte() {
+
+        var t = document.getElementById("subject");
+        tsize += 0.2;
+        t.style.fontSize= tsize + "rem";
+
+        if (tsize <=5){
+            setTimeout(tekstgrootte,70);
+        }
+    }
+    tekstgrootte();
+
+
+/*
+
+    function fun () {
+        s.style.background = "blue";
+    }
+    setTimeout(fun,2000);
+    */
+
+
+</script>
+</body>
+</html>
